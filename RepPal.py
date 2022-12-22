@@ -1,6 +1,5 @@
 # Ashwin Unnithan
 # RepPal - the assitative exercise app which controls an automated bicep/hamstring curler (regulated by a raspberry PI)
-# Last Updated: 2022/07/09
 
 """
 # Imports classes from the gpiozero module
@@ -8,11 +7,19 @@ from gpiozero import Motor      # imports the Motor class
 from gpiozero import Button as gpiozeroButton   #Imports the Button class
 """
 
-from tkinter import * #Imports all elements from the tkinter module
-import time #imports the time module
+# Import all additional modules
+from tkinter import * 
+import time 
 import sys
-import tkinter # imports the sys module
+import tkinter 
 import pymongo
+
+
+"""
+1. Raspberry Pi hardware funnctions:
+        interfaces with the raspberry PI (via VNC viewer) to cotrol associated sensors and actuators to move the physical prototype
+"""
+
 
 """
 def move_motor(op_time,motor): # defines the function: move_motor to activate and move the actuator
@@ -63,7 +70,24 @@ def run_op(reps):  # defines the function: rep_ops to move to run the above func
 """
 
 
-def add_account_info(data):
+
+"""
+2. Mongo database and external text file setup:
+        stores user data within database through pymongo driver
+        information stored include name, username and password
+"""
+client = pymongo.MongoClient("mongodb+srv://reppal:IhFnYG9UwNQ5iOzP@cluster0.awm1cub.mongodb.net/?retryWrites=true&w=majority")
+db = client["reppal"]
+user_col = db["repuser"]
+
+
+def add_user_profile(username, email, password, collection):
+    userdict = { "_id": 1, "Username": username, "Email": email, "Password": password}
+    collection.insert_one(userdict)
+    
+
+    
+def file_account_info(data):
     prompts = ["Username: ", "Email: ", "Password: "]
     id = 0
     with open("user_data.txt", "a") as user_file:
@@ -72,7 +96,14 @@ def add_account_info(data):
             user_file.write(prompts[id] + elm + "\t")
             id+=1
         user_file.write("\n")
+            
 
+
+
+"""
+3. UI Interface flow control:
+        drives the functionality and flow of data across different pages of the UI
+"""
 
 def calories_burned(MET, duration, body_weight, rep_count): # defines the function: calories_burned to calculate the amount of calories burned during bicep or hamstring excercise
     cals = ((rep_count*MET*3.5*body_weight)*(duration/30))/200
@@ -198,7 +229,7 @@ def Workout(): # defines the function: Workout to display the workout options an
             selection = "bicep"
             window.destroy()
             Stats(reps.get(), selection)
-            run_op(reps.get())
+            #run_op(reps.get())
 
 
         def hamstring_clicked(): # defines function to close the window once the bicep button is clicked
@@ -320,7 +351,8 @@ def SignUp(): # defines the function: SignUp to allow user to enter their accoun
         def btn_clicked(): # defines function to close the window once button is clicked and call the next page
             window.destroy()
             data = [username.get(), email.get(), password.get()]
-            add_account_info(data)
+            file_account_info(data)
+            add_user_profile(data[0], data[1], data[2], user_col)
             Workout()
 
         username = StringVar(window, value = "")
