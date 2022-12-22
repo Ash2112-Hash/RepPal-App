@@ -12,6 +12,7 @@ from tkinter import * #Imports all elements from the tkinter module
 import time #imports the time module
 import sys
 import tkinter # imports the sys module
+import pymongo
 
 """
 def move_motor(op_time,motor): # defines the function: move_motor to activate and move the actuator
@@ -73,8 +74,8 @@ def add_account_info(data):
         user_file.write("\n")
 
 
-def calories_burned(MET, duration, body_weight): # defines the function: calories_burned to calculate the amount of calories burned during bicep or hamstring excercise
-    cals = (MET*body_weight)*(duration/60)
+def calories_burned(MET, duration, body_weight, rep_count): # defines the function: calories_burned to calculate the amount of calories burned during bicep or hamstring excercise
+    cals = ((rep_count*MET*3.5*body_weight)*(duration/30))/200
     return cals
 
 
@@ -106,7 +107,7 @@ def Stats(Rep_Data, selection_fct): # defines the function: Stats to display the
 
         
         if selection_fct == "bicep":
-            cals_burned = calories_burned(3, 60, 70)
+            cals_burned = calories_burned(3, 60, 70, Rep_Data)
             
             label0 = Label(
             bd = 0,
@@ -114,7 +115,7 @@ def Stats(Rep_Data, selection_fct): # defines the function: Stats to display the
             highlightthickness= 0,
             fg = "white",
             font = mono,
-            text= str(Rep_Data) + " Reps" + "\n \n" + str(cals_burned) +  " Cals Burned")
+            text= str(Rep_Data) + " Reps" + "\n \n" + str(cals_burned) +  "Cals")
 
             label0.place(
                 x = 29, y = 287,
@@ -122,14 +123,14 @@ def Stats(Rep_Data, selection_fct): # defines the function: Stats to display the
                 height = 55)
         
         else:
-            cals_burned = calories_burned(4, 60, 70)
+            cals_burned = calories_burned(4, 60, 70, Rep_Data)
             label1 = Label(
             bd = 0,
             bg = "#2f353d",
             highlightthickness= 0,
             fg = "white",
             font = mono,
-            text= str(Rep_Data) + " Reps" + "\n \n" + str(cals_burned) + " Cals Burned")
+            text= str(Rep_Data) + " Reps" + "\n \n" + str(cals_burned) + " Cals")
 
             label1.place(
                 x = 200, y = 287,
