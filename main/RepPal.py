@@ -90,7 +90,7 @@ def add_user_profile(username, email, password, collection):
 def file_account_info(data):
     prompts = ["Username: ", "Email: ", "Password: "]
     id = 0
-    with open("user_data.txt", "a") as user_file:
+    with open("User Data (text file)/user_data.txt", "a") as user_file:
         user_file.seek(0, 2)
         for elm in data:
             user_file.write(prompts[id] + elm + "\t")
@@ -131,7 +131,7 @@ def Stats(Rep_Data, selection_fct): # defines the function: Stats to display the
         #####
 
         ##### Defines the textboxes and images for the page ######
-        background_img = PhotoImage(file = f"bg_4.png")
+        background_img = PhotoImage(file = f"UI Images/bg_4.png")
         background = canvas.create_image(
             190.0, 383.5,
             image=background_img)
@@ -239,13 +239,13 @@ def Workout(): # defines the function: Workout to display the workout options an
             #run_op(reps.get())
 
         ##### Defines the textboxes and images for the page ######
-        background_img = PhotoImage(file=f"bg_3.png")
+        background_img = PhotoImage(file=f"UI Images/bg_3.png")
         background = canvas.create_image(
             182.0, 311.0,
             image=background_img)
 
 
-        entry0_img = PhotoImage(file=f"img_textBox0.png")
+        entry0_img = PhotoImage(file=f"UI Images/img_textBox0.png")
         entry0_bg = canvas.create_image(
             174.0, 656.5,
             image=entry0_img)
@@ -264,7 +264,7 @@ def Workout(): # defines the function: Workout to display the workout options an
             height=55)
 
 
-        img1 = PhotoImage(file=f"bicep.png")
+        img1 = PhotoImage(file=f"UI Images/bicep.png")
         b1 = Button(
             image=img1,
             borderwidth=0,
@@ -277,7 +277,7 @@ def Workout(): # defines the function: Workout to display the workout options an
             width=174,
             height=207)
 
-        img2 = PhotoImage(file=f"calf.png")
+        img2 = PhotoImage(file=f"UI Images/calf.png")
         b2 = Button(
             image=img2,
             borderwidth=0,
@@ -360,7 +360,7 @@ def SignUp(): # defines the function: SignUp to allow user to enter their accoun
         password = StringVar(window, value = "")
 
         ##### Defines the textboxes and images for the page ######
-        entry0_img = PhotoImage(file = f"img_textBox0.png")
+        entry0_img = PhotoImage(file = f"UI Images/img_textBox0.png")
         entry0_bg = canvas.create_image(
             181.0, 240.5,
             image = entry0_img)
@@ -377,7 +377,7 @@ def SignUp(): # defines the function: SignUp to allow user to enter their accoun
             width = 257.0,
             height = 55)
 
-        entry1_img = PhotoImage(file = f"img_textBox1.png")
+        entry1_img = PhotoImage(file = f"UI Images/img_textBox1.png")
         entry1_bg = canvas.create_image(
             180.0, 346.5,
             image = entry1_img)
@@ -395,7 +395,7 @@ def SignUp(): # defines the function: SignUp to allow user to enter their accoun
             width = 257.0,
             height = 55)
 
-        entry2_img = PhotoImage(file = f"img_textBox2.png")
+        entry2_img = PhotoImage(file = f"UI Images/img_textBox2.png")
         entry2_bg = canvas.create_image(
             179.0, 452.5,
             image = entry2_img)
@@ -413,12 +413,12 @@ def SignUp(): # defines the function: SignUp to allow user to enter their accoun
             width = 257.0,
             height = 55)
 
-        background_img = PhotoImage(file = f"sign_bg.png")
+        background_img = PhotoImage(file = f"UI Images/sign_bg.png")
         background = canvas.create_image(
             182.5, 421.0,
             image=background_img)
 
-        next_bt_img = PhotoImage(file = f"next_btn.png")
+        next_bt_img = PhotoImage(file = f"UI Images/next_btn.png")
         next_bt = Button(
             image = next_bt_img,
             borderwidth = 0,
@@ -493,12 +493,12 @@ def Start(): # defines the function: Start to display the starting window for th
             SignUp()
             
         ##### Defines the textboxes and images for the page ######
-        background_img = PhotoImage(file=f"start_bg.png")
+        background_img = PhotoImage(file=f"UI Images/start_bg.png")
         background = canvas.create_image(
             232.5, 400.0,
             image=background_img)
 
-        img0 = PhotoImage(file=f"img0.png")
+        img0 = PhotoImage(file=f"UI Images/img0.png")
         b0 = Button(
             image=img0,
             borderwidth=0,
