@@ -2,11 +2,11 @@
        - an assitative exercise app which controls an automated bicep/hamstring curler (regulated by a raspberry PI)
 """
 
-"""
+
 # Imports classes from the gpiozero module
 from gpiozero import Motor      # imports the Motor class
 from gpiozero import Button as gpiozeroButton   #Imports the Button class
-"""
+
 
 # Import all additional modules
 from tkinter import * 
@@ -22,7 +22,7 @@ import pymongo
 """
 
 
-"""
+
 def move_motor(op_time,motor): # defines the function: move_motor to activate and move the actuator
     # function accepts a time and a actuator object as parameters to move the components forward and backward in cycles 
     motor.forward()
@@ -68,7 +68,7 @@ def run_op(reps):  # defines the function: rep_ops to move to run the above func
 
     except:
         print("An invalid input was entered. Reload the app!")
-"""
+
 
 
 
