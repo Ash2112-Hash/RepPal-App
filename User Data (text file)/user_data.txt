@@ -1,17 +1,3 @@
-Username: janice11	Email: janjan@gmail.com	Password: janice98!!	
-Username: hh	Email: hhh	Password: hhhh	
-Username: ff	Email: fff	Password: fff	
-Username: dd	Email: dddd	Password: dddd	
-Username: sss	Email: ssss	Password: sssss	
-Username: ffff	Email: ffff	Password: fff	
-Username: rrr	Email: rrrr	Password: rrrrrrrrrrrr	
-Username: ddd	Email: ddd	Password: dddd	
-Username: dd	Email: dd	Password: ddd	
-Username: fff	Email: fff	Password: ffff	
-Username: ddd	Email: ddd	Password: ddd	
-Username: ff	Email: fff	Password: fffff	
-Username: fff	Email: ff	Password: fff	
-Username: gggg	Email: gggg	Password: ggggg	
 Username: johndoe11	Email: jonjon@gmail.com	Password: johh1987	
 Username: janice11	Email: janjan@gmail.com	Password: jan2007	
 Username: frankM	Email: frankMech@outlook.ca	Password: frank45universe	
