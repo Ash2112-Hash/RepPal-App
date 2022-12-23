@@ -82,7 +82,7 @@ user_col = db["repuser"]
 
 
 def add_user_profile(username, email, password, collection):
-    userdict = { "_id": 1, "Username": username, "Email": email, "Password": password}
+    userdict = {"_id": (collection.count_documents({}) + 1),"Username": username, "Email": email, "Password": password}
     collection.insert_one(userdict)
     
 
@@ -97,8 +97,6 @@ def file_account_info(data):
             id+=1
         user_file.write("\n")
             
-
-
 
 """
 3. UI Interface flow control:
