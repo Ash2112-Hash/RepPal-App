@@ -6,7 +6,7 @@
  ## Synopsis ##
 Developed a mobile application UI to interface with a bicep/hamstring curler prototype to allow a MS (multiple sclerosis) patient to perform automated upper-limb exercises.
 
-![image](https://user-images.githubusercontent.com/59580503/209366661-b54db6cd-6027-474f-adab-b0c6516ed0f8.png)  ![image](https://user-images.githubusercontent.com/59580503/209366809-b5ebd58a-8095-4359-914e-b25cf8870116.png)  ![image](https://user-images.githubusercontent.com/59580503/209366864-c5769967-116b-4d1b-a817-252db9606ea6.png)
+![image](https://user-images.githubusercontent.com/59580503/209367021-6ac9f656-54b6-4d53-8d04-6a0d5c9a450b.png)  ![image](https://user-images.githubusercontent.com/59580503/209366809-b5ebd58a-8095-4359-914e-b25cf8870116.png)  ![image](https://user-images.githubusercontent.com/59580503/209366864-c5769967-116b-4d1b-a817-252db9606ea6.png)
 
 
 
