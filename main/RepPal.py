@@ -1,5 +1,6 @@
-# Ashwin Unnithan
-# RepPal - the assitative exercise app which controls an automated bicep/hamstring curler (regulated by a raspberry PI)
+""" RepPal Automated Excercise App
+       - an assitative exercise app which controls an automated bicep/hamstring curler (regulated by a raspberry PI)
+"""
 
 """
 # Imports classes from the gpiozero module
