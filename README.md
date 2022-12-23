@@ -1,4 +1,7 @@
 ﻿# RepPal-App
+![image](https://user-images.githubusercontent.com/59580503/209366247-e8a84a89-340e-45eb-b6a3-df12b2f820ef.png) | ![image](https://user-images.githubusercontent.com/59580503/209366661-b54db6cd-6027-474f-adab-b0c6516ed0f8.png)
+
+
 
  ## Synopsis ##
 Developed a mobile application UI to interface with a bicep/hamstring curler prototype to allow a MS (multiple sclerosis) patient to perform automated upper-limb exercises.
