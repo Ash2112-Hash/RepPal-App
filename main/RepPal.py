@@ -77,7 +77,8 @@ def run_op(reps):  # defines the function: rep_ops to move to run the above func
         stores user data within database through pymongo driver
         information stored include name, username and password
 """
-client = pymongo.MongoClient("mongodb+srv://reppal:IhFnYG9UwNQ5iOzP@cluster0.awm1cub.mongodb.net/?retryWrites=true&w=majority")
+#(insert password for your database)
+client = pymongo.MongoClient("mongodb+srv://@cluster0.awm1cub.mongodb.net/?retryWrites=true&w=majority")
 db = client["reppal"]
 user_col = db["repuser"]
 
