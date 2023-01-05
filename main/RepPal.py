@@ -81,6 +81,9 @@ def run_op(reps):  # defines the function: rep_ops to move to run the above func
 client = pymongo.MongoClient("mongodb+srv://@cluster0.awm1cub.mongodb.net/?retryWrites=true&w=majority")
 db = client["reppal"]
 user_col = db["repuser"]
+# create a MongoDB client object referenced by the client variable
+# create a database called reppal within the client
+# create a collection called repuser within the database
 
 
 def add_user_profile(username, email, password, collection):
